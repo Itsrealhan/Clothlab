@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="61dp"
+    android:layout_marginBottom="10dp"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="4dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/imgNotif"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="15dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/img_jacket"/>
+
+    <LinearLayout
+        android:id="@+id/body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imgNotif"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNotifTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification Title"
+            android:textSize="13sp"
+            android:textColor="@color/black_title"
+            android:fontFamily="@font/notosans_medium"/>
+
+        <TextView
+            android:id="@+id/tvNotifContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:maxLength="37"
+            android:text="@string/product_description"
+            android:textSize="12sp"
+            android:textColor="@color/black_title"
+            android:fontFamily="@font/notosans_regular"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_arrow_next"/>
+
+</RelativeLayout>

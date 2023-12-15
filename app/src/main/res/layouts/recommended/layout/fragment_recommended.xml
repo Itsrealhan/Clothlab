@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="45dp"
+    android:background="@color/green_primary"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".recommended.RecommendedFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:paddingHorizontal="24dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="14dp"
+            android:layout_weight="10"
+            android:background="@drawable/bg_et_search"
+            android:drawableEnd="@drawable/ic_search"
+            android:drawableTint="@color/grey_hint"
+            android:hint="Search"
+            android:inputType="textAutoCorrect"
+            android:maxLines="1"
+            android:paddingHorizontal="12dp"
+            android:textColor="@color/black_form_title"
+            android:textColorHint="@color/grey_hint"
+            android:textSize="12sp"
+            android:fontFamily="@font/notosans_regular"/>
+
+        <ImageView
+            android:id="@+id/btnChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_chat"/>
+
+        <ImageView
+            android:id="@+id/btnCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_cart" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:background="@color/grey_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="5dp"
+                android:paddingHorizontal="17dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn0"
+                    android:layout_width="46dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="All"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/notosans_regular"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn_type_product"
+                    android:backgroundTint="@color/green_primary"/>
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="46dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Men"
+                    android:textSize="12sp"
+                    android:textColor="@color/black_title"
+                    android:fontFamily="@font/notosans_regular"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn_type_product"
+                    android:backgroundTint="@color/grey_button"/>
+
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="66dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Women"
+                    android:textSize="12sp"
+                    android:textColor="@color/black_title"
+                    android:fontFamily="@font/notosans_regular"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn_type_product"
+                    android:backgroundTint="@color/grey_button"/>
+
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_width="48dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Kids"
+                    android:textSize="12sp"
+                    android:textColor="@color/black_title"
+                    android:fontFamily="@font/notosans_regular"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn_type_product"
+                    android:backgroundTint="@color/grey_button"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerProductRecommended"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:paddingBottom="64dp"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

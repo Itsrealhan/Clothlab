@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="45dp"
+    android:background="@color/black_title"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".home.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:paddingHorizontal="24dp"
+        android:orientation="horizontal">
+
+<!--        <SearchView-->
+<!--            android:id="@+id/etSearch"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="38dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_weight="10"-->
+<!--            android:background="@drawable/bg_et_search"-->
+<!--            android:queryHint="Search"-->
+<!--            android:inputType="textAutoCorrect"-->
+<!--            android:paddingHorizontal="12dp"/>-->
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="14dp"
+            android:layout_weight="10"
+            android:background="@drawable/bg_et_search"
+            android:drawableEnd="@drawable/ic_search"
+            android:drawableTint="@color/grey_hint"
+            android:hint="Search"
+            android:inputType="textAutoCorrect"
+            android:maxLines="1"
+            android:paddingHorizontal="12dp"
+            android:textColor="@color/black_form_title"
+            android:textColorHint="@color/grey_hint"
+            android:textSize="12sp"
+            android:fontFamily="@font/notosans_regular"/>
+
+        <ImageView
+            android:id="@+id/btnChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_chat"/>
+
+        <ImageView
+            android:id="@+id/btnCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_cart"/>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:paddingHorizontal="24dp"
+                android:orientation="vertical">
+
+                <com.synnapps.carouselview.CarouselView
+                    android:id="@+id/carouselAdsBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="128dp"
+                    android:layout_marginBottom="18dp"
+                    app:slideInterval="3000"
+                    app:indicatorVisibility="gone"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerMenuProductHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerProductHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="66dp"
+                android:paddingHorizontal="10dp"
+                android:nestedScrollingEnabled="false"
+                android:background="@drawable/bg_layout"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+
+
+    <!--    <androidx.constraintlayout.motion.widget.MotionLayout-->
+    <!--        android:id="@+id/motionAdsBanner"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/bg_ads_banner"-->
+    <!--        app:layoutDescription="@xml/fragment_home_scene">-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/img1"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="128dp" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/img2"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="128dp" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/img3"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="128dp" />-->
+
+    <!--        <androidx.constraintlayout.helper.widget.Carousel-->
+    <!--            android:id="@+id/carouselAdsBanner"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:carousel_backwardTransition="@+id/backward"-->
+    <!--            app:carousel_firstView="@id/img1"-->
+    <!--            app:carousel_forwardTransition="@+id/forward"-->
+    <!--            app:carousel_infinite="true"-->
+    <!--            app:carousel_nextState="@+id/next"-->
+    <!--            app:carousel_previousState="@+id/previous"-->
+    <!--            app:constraint_referenced_ids="img1, img2, img3" />-->
+
+    <!--    </androidx.constraintlayout.motion.widget.MotionLayout>-->

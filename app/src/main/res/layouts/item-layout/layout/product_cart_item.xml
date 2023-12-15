@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:paddingVertical="10dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:paddingHorizontal="24dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkProductCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/tvProductStoreNameCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Store Name"
+                android:textSize="12sp"
+                android:textColor="@color/black_title"
+                android:fontFamily="@font/notosans_bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/tvProductChangeCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Change"
+                android:textSize="11sp"
+                android:textColor="@color/grey_hint"
+                android:fontFamily="@font/notosans_regular"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey_background"
+        android:layout_marginBottom="7dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/img_jacket"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvProductNameCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="3dp"
+                android:includeFontPadding="true"
+                android:text="Product Name"
+                android:textSize="13sp"
+                android:textColor="@color/black_title"
+                android:fontFamily="@font/notosans_regular"/>
+
+            <TextView
+                android:id="@+id/tvProductVariationCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/tvProductNameCart"
+                android:includeFontPadding="false"
+                android:text="Variant:"
+                android:textSize="11sp"
+                android:textColor="@color/black_title"
+                android:fontFamily="@font/notosans_regular"/>
+
+            <TextView
+                android:id="@+id/tvProductPriceCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/tvProductVariationCart"
+                android:includeFontPadding="false"
+                android:text="Rp 200.000"
+                android:textSize="15sp"
+                android:textColor="@color/green_primary"
+                android:fontFamily="@font/notosans_regular"/>
+
+            <TextView
+                android:id="@+id/tvProductQtyCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/tvProductVariationCart"
+                android:text="Piece(s):"
+                android:textSize="10sp"
+                android:textColor="@color/black_title"
+                android:fontFamily="@font/notosans_regular"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
